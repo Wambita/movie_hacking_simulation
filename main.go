@@ -98,3 +98,25 @@ func cpuSimulation() {
 		time.Sleep(300 * time.Millisecond)
 	}
 }
+func passwordCrack() {
+
+	fmt.Println("Running password cracking module...")
+
+	passwords := []string{
+		"admin123",
+		"root",
+		"qwerty",
+		"letmein",
+	}
+
+	for i := 0; i < 10; i++ {
+
+		pass := passwords[rand.Intn(len(passwords))]
+
+		fmt.Printf("Trying password: %-10s FAILED\n", pass)
+
+		time.Sleep(120 * time.Millisecond)
+	}
+
+	fmt.Println("Password found: r00t@access")
+}
