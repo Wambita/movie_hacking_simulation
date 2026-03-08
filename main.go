@@ -127,3 +127,43 @@ func randomWarning() {
 func randomError() {
 	fmt.Println("ERROR: Timeout connecting to node.")
 }
+
+func aiTrainingSimulation() {
+
+	fmt.Println("Launching AI intrusion detection model...")
+
+	for i := 1; i <= 10; i++ {
+
+		loss := rand.Float64()
+
+		fmt.Printf("Epoch %d/10 - loss: %.4f - accuracy: %.2f%%\n",
+			i,
+			loss,
+			rand.Float64()*100)
+
+		time.Sleep(350 * time.Millisecond)
+	}
+}
+
+func main() {
+	typeLine("INITIALIZING DARKNET TERMINAL...", 25*time.Millisecond)
+	typeLine("LOADING EXPLOIT FRAMEWORK...", 25*time.Millisecond)
+
+	matrixRain(20)
+
+	progressBar("Injecting firewall bypass module")
+
+	scanNetwork()
+
+	cpuSimulation()
+
+	progressBar("Deploying packet sniffer")
+
+	passwordCrack()
+
+	aiTrainingSimulation()
+
+	progressBar("Extracting encrypted payload")
+
+	fmt.Println("ACCESS GRANTED ✔")
+}
