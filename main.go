@@ -1,7 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
+
+func typeLine(text string, speed time.Duration) {
+	for _, c := range text {
+		fmt.Printf("%c", c)
+		time.Sleep(speed)
+	}
+	fmt.Println()
+}
 
 func main() {
-	fmt.Println("Initializing terminal...")
+	typeLine("INITIALIZING DARKNET TERMINAL...", 25*time.Millisecond)
 }
