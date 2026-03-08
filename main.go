@@ -5,10 +5,14 @@ import (
 	"time"
 )
 const (
-	green = "\033[32m"
-	reset = "\033[0m"
+	green  = "\033[32m"
+	red    = "\033[31m"
+	yellow = "\033[33m"
+	cyan   = "\033[36m"
+	reset  = "\033[0m"
 )
 
+var r = rand.New(rand.NewSource(time.Now().UnixNano()))
 
 func typeLine(text string, speed time.Duration) {
 	for _, c := range text {
@@ -16,12 +20,6 @@ func typeLine(text string, speed time.Duration) {
 		time.Sleep(speed)
 	}
 	fmt.Println()
-}
-
-
-func main() {
-	fmt.Print(green)
-	typeLine("INITIALIZING DARKNET TERMINAL...", 25*time.Millisecond)
 }
 
 func matrixRain(lines int) {
