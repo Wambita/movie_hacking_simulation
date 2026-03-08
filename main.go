@@ -120,3 +120,10 @@ func passwordCrack() {
 
 	fmt.Println("Password found: r00t@access")
 }
+func randomWarning() {
+	fmt.Println("WARNING: Firewall resistance detected...")
+}
+
+func randomError() {
+	fmt.Println("ERROR: Timeout connecting to node.")
+}
