@@ -41,3 +41,22 @@ func matrixRain(lines int) {
 		time.Sleep(20 * time.Millisecond)
 	}
 }
+
+func progressBar(task string) {
+
+	fmt.Println(task)
+
+	barLength := 30
+
+	for i := 0; i <= barLength; i++ {
+
+		bar := strings.Repeat("█", i) + strings.Repeat(" ", barLength-i)
+
+		fmt.Printf("\r[%s]", bar)
+
+		time.Sleep(50 * time.Millisecond)
+	}
+
+	fmt.Println(" COMPLETE")
+}
+
