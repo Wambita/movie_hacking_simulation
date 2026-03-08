@@ -59,4 +59,24 @@ func progressBar(task string) {
 
 	fmt.Println(" COMPLETE")
 }
+func randomIP() string {
 
+	return fmt.Sprintf("%d.%d.%d.%d",
+		rand.Intn(255),
+		rand.Intn(255),
+		rand.Intn(255),
+		rand.Intn(255))
+}
+func scanNetwork() {
+
+	typeLine("Scanning target network...", 20*time.Millisecond)
+
+	for i := 0; i < 10; i++ {
+
+		ip := randomIP()
+
+		fmt.Printf("Host detected -> %s : ports [22, 80, 443]\n", ip)
+
+		time.Sleep(120 * time.Millisecond)
+	}
+}
