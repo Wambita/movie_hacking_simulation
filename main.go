@@ -16,3 +16,8 @@ func typeLine(text string, speed time.Duration) {
 func main() {
 	typeLine("INITIALIZING DARKNET TERMINAL...", 25*time.Millisecond)
 }
+
+const (
+	green = "\033[32m"
+	reset = "\033[0m"
+)
