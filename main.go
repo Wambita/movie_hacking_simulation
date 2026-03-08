@@ -80,3 +80,21 @@ func scanNetwork() {
 		time.Sleep(120 * time.Millisecond)
 	}
 }
+
+func cpuSimulation() {
+
+	fmt.Println("Monitoring system resources...")
+
+	for i := 0; i < 10; i++ {
+
+		cpu := rand.Intn(60) + 30
+		mem := rand.Intn(40) + 40
+
+		fmt.Printf("CPU: %d%% | MEMORY: %d%% | THREADS: %d\n",
+			cpu,
+			mem,
+			rand.Intn(4000))
+
+		time.Sleep(300 * time.Millisecond)
+	}
+}
