@@ -24,3 +24,20 @@ func main() {
 	typeLine("INITIALIZING DARKNET TERMINAL...", 25*time.Millisecond)
 }
 
+func matrixRain(lines int) {
+
+	chars := "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*"
+
+	for i := 0; i < lines; i++ {
+
+		line := ""
+
+		for j := 0; j < 70; j++ {
+			line += string(chars[rand.Intn(len(chars))])
+		}
+
+		fmt.Println(line)
+
+		time.Sleep(20 * time.Millisecond)
+	}
+}
